@@ -22,6 +22,26 @@
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Added: makes it obvious which cards open a repo */
+        .repo-hint {
+            display: inline-block;
+            margin-top: 12px;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: #00f2ff;
+            opacity: 0.85;
+        }
+        .repo-hint i { margin-right: 6px; }
+        .no-repo-hint {
+            display: inline-block;
+            margin-top: 12px;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+    </style>
 </head>
 
 <body>
@@ -77,9 +97,9 @@
                                 <pre><code><span class="keyword">class</span> <span class="class">DataScientist</span>:
     <span class="keyword">def</span> <span class="function">__init__</span>(<span class="keyword">self</span>):
         <span class="keyword">self</span>.name = <span class="string">"Santhosh Arunagiri"</span>
-        <span class="keyword">self</span>.roles = [<span class="string">"AI Researcher"</span>, <span class="string">"ML Engineer"</span>, <span class="string">"Data Scientist"</span>]
-        <span class="keyword">self</span>.specialty = <span class="string">"Deep Learning & Computer Vision"</span>
-        <span class="keyword">self</span>.status = <span class="string">"Ready to deploy scalable intelligence"</span>
+        <span class="keyword">self</span>.roles = [<span class="string">"Data Scientist"</span>, <span class="string">"ML Engineer"</span>, <span class="string">"Data Analyst"</span>]
+        <span class="keyword">self</span>.education = <span class="string">"MSc Data Science & AI, Distinction, Liverpool"</span>
+        <span class="keyword">self</span>.status = <span class="string">"Available immediately. Open to relocation across India."</span>
 
 <span class="comment"># Initialize Environment</span>
 user = DataScientist()
@@ -91,13 +111,18 @@ user = DataScientist()
                                     Welcome to my portfolio! I'm</p>
                                 <h1 class="glitch" data-text="SANTHOSH ARUNAGIRI"
                                     style="font-size: 3.5rem; margin-bottom: 10px;">SANTHOSH ARUNAGIRI</h1>
-                                <p class="subtitle" style="font-size: 1.5rem;">AI & ML Data Scientist</p>
+                                <p class="subtitle" style="font-size: 1.5rem;">Data Scientist and ML Engineer</p>
+                                <p style="color: var(--text-muted); font-size: 1.05rem; margin-top: 10px; max-width: 620px; line-height: 1.6;">
+                                    I built and ran a live analytics platform for Indian Oil used by over 1,000 people
+                                    across 9 districts. Before that, an MSc in Data Science and AI at Liverpool, and a
+                                    dissertation on predicting smell from molecular structure. Most of what I build gets
+                                    checked against something real before I trust it.</p>
                                 <div class="tech-stack-hero">
                                     <span>Python</span>
-                                    <span>PyTorch</span>
-                                    <span>TensorFlow</span>
                                     <span>SQL</span>
-                                    <span>Cloud</span>
+                                    <span>TensorFlow</span>
+                                    <span>PostgreSQL</span>
+                                    <span>Power BI</span>
                                 </div>
                             </div>
                         </div>
@@ -122,12 +147,15 @@ user = DataScientist()
                                         </h3>
                                         <ul
                                             style="color: var(--text-primary); margin-left: 20px; line-height: 1.8; margin-top: 15px;">
-                                            <li><b>Languages & Tools:</b> Python, SQL, PostgreSQL, JAX, TensorFlow, Git.
-                                            </li>
-                                            <li><b>AI & ML:</b> Predictive Modeling, RLHF, Prompt Engineering, Graph
-                                                Neural Networks (GNNs), Monte Carlo Simulations.</li>
-                                            <li><b>Data & Analytics:</b> Exploratory Data Analysis, XGBoost, Selenium,
-                                                Matplotlib, Streamlit.</li>
+                                            <li><b>Languages & Tools:</b> Python, SQL, PostgreSQL, JavaScript,
+                                                TypeScript, R, Git, Linux.</li>
+                                            <li><b>AI & ML:</b> scikit-learn, XGBoost, TensorFlow, Keras, JAX,
+                                                Graph Neural Networks, CNNs, LLM evaluation, prompt engineering,
+                                                Monte Carlo simulation.</li>
+                                            <li><b>Data & Analytics:</b> pandas, NumPy, SciPy, ETL pipelines,
+                                                Selenium, Power BI, Streamlit, Matplotlib, Plotly.</li>
+                                            <li><b>Statistics:</b> Hypothesis testing, experimental design,
+                                                Bayesian methods, walk forward and hold out validation.</li>
                                         </ul>
                                     </div>
 
@@ -138,12 +166,12 @@ user = DataScientist()
                                         </h3>
                                         <ul
                                             style="color: var(--text-primary); margin-left: 20px; line-height: 1.8; margin-top: 15px;">
-                                            <li><b>Leadership & Management:</b> Project Ownership, Functional
-                                                Communication, Product Architecture.</li>
-                                            <li><b>Analytical Thinking:</b> Complex Reasoning Evaluation, System
-                                                Logistics, Problem Solving.</li>
-                                            <li><b>Operational:</b> Process Automation, Regulatory Compliance, Domain
-                                                Strategy Structuring.</li>
+                                            <li><b>Ownership:</b> Ran a platform end to end, from gathering
+                                                requirements with managers through to maintenance.</li>
+                                            <li><b>Communication:</b> Explaining quantitative findings to people
+                                                with no technical background, and training staff to use systems.</li>
+                                            <li><b>Operational:</b> Process automation, working inside regulated
+                                                compliance frameworks, technical documentation.</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -174,7 +202,7 @@ user = DataScientist()
                                             University of Liverpool</p>
                                         <p
                                             style="color: var(--text-muted); font-family: var(--font-mono); font-size: 0.95rem;">
-                                            September 2022 – December 2023</p>
+                                            September 2022 to December 2023</p>
                                         <div class="tags" style="margin-top:15px;">
                                             <span
                                                 style="background: rgba(243, 156, 18, 0.1); border-color: #f39c12; color: #f39c12; font-weight:bold;"><i
@@ -190,8 +218,11 @@ user = DataScientist()
                                             Bishop Heber College (Bharathidasan University)</p>
                                         <p
                                             style="color: var(--text-muted); font-family: var(--font-mono); font-size: 0.95rem;">
-                                            June 2017 – April 2020</p>
+                                            June 2017 to April 2020</p>
                                         <div class="tags" style="margin-top:15px;">
+                                            <span
+                                                style="background: rgba(76, 175, 80, 0.1); border-color: #4CAF50; color: #4CAF50; font-weight:bold;">CGPA
+                                                8.04 / 10</span>
                                             <span>Chemistry</span><span>Science</span>
                                         </div>
                                     </div>
@@ -223,47 +254,45 @@ user = DataScientist()
                                             Indian Oil Corporation Ltd (IOCL)</p>
                                         <p
                                             style="color: var(--text-muted); font-family: var(--font-mono); font-size: 0.95rem; margin-bottom: 15px;">
-                                            2026 – Current</p>
+                                            January 2026 to May 2026</p>
                                         <ul style="color: var(--text-primary); margin-left: 20px; line-height: 1.6;">
-                                            <li style="margin-bottom: 8px;"><b>Project Leadership:</b> Architected and
-                                                deployed a full-stack predictive analytics platform digitizing sales
-                                                operations for the ND cylinders and NFR divisions.</li>
-                                            <li style="margin-bottom: 8px;"><b>Predictive Modeling:</b> Integrated
-                                                Machine Learning models to analyze high-velocity sales data, providing
-                                                divisional managers with actionable demand forecasts.</li>
-                                            <li style="margin-bottom: 8px;"><b>Systems Integrity:</b> Engineered a
-                                                real-time inventory management system with transactional consistency,
-                                                supporting hundreds of concurrent users and ensuring data reliability.
-                                            </li>
-                                            <li><b>Platform Ownership:</b> Currently managing end-to-end maintenance,
-                                                site reliability, and iterative feature deployment for the enterprise
-                                                solution.</li>
+                                            <li style="margin-bottom: 8px;"><b>Sole developer:</b> Built and deployed
+                                                the TRY IDO analytics platform for the ND cylinders and NFR divisions,
+                                                from gathering requirements with divisional managers through design,
+                                                build, testing, deployment and maintenance.</li>
+                                            <li style="margin-bottom: 8px;"><b>Scale:</b> Over 1,000 users across 9
+                                                districts, with a real time inventory system built to stay consistent
+                                                under concurrent load.</li>
+                                            <li style="margin-bottom: 8px;"><b>Data quality:</b> Wrote automated
+                                                validation and reconciliation routines that check submitted data
+                                                against business rules before it reaches any report.</li>
+                                            <li style="margin-bottom: 8px;"><b>Modelling:</b> Integrated demand
+                                                forecasting over high velocity sales data and put the results inside
+                                                the tools managers already used.</li>
+                                            <li><b>Recognition:</b> Honoured by the Executive Director (TNSO) and Chief
+                                                General Manager (LPG) for delivering the platform.</li>
                                         </ul>
+                                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 12px; font-style: italic;">
+                                            The project was put on hold in May 2026 following an LPG supply shortage.</p>
                                     </div>
 
                                     <div class="project-card"
                                         style="border-left-color: #3498db; cursor: default; grid-column: 1 / -1;"
                                         onclick="event.stopPropagation()">
-                                        <h3 style="color: var(--text-primary); font-size: 1.3rem;">AI Content Engineer –
-                                            Oracle
+                                        <h3 style="color: var(--text-primary); font-size: 1.3rem;">AI Training
                                             Contributor (Freelance)</h3>
                                         <p
                                             style="color: #3498db; font-weight: bold; margin-bottom: 5px; font-size: 1.1rem;">
                                             Outlier.ai</p>
                                         <p
                                             style="color: var(--text-muted); font-family: var(--font-mono); font-size: 0.95rem; margin-bottom: 15px;">
-                                            2023 – Current</p>
+                                            2025 to present (remote, part time)</p>
                                         <ul style="color: var(--text-primary); margin-left: 20px; line-height: 1.6;">
-                                            <li style="margin-bottom: 8px;"><b>LLM Optimization:</b> Performing
-                                                high-level Reinforcement Learning from Human Feedback (RLHF) to
-                                                fine-tune Large Language Models (LLMs) for technical accuracy and
-                                                logical reasoning.</li>
-                                            <li style="margin-bottom: 8px;"><b>Technical Evaluation:</b> Auditing
-                                                model-generated code (Python) and complex reasoning chains to ensure
-                                                adherence to strict safety and performance constraints.</li>
-                                            <li><b>Prompt Engineering:</b> Developing and testing complex multi-turn
-                                                prompts to evaluate model capabilities in RAG architectures and agentic
-                                                AI concepts.</li>
+                                            <li style="margin-bottom: 8px;"><b>Model evaluation:</b> Assess model
+                                                output against written specifications and grading rubrics, applying
+                                                the same criteria consistently across tasks.</li>
+                                            <li><b>Review and comparison:</b> Compare model inputs and outputs for
+                                                accuracy and adherence to instructions.</li>
                                         </ul>
                                     </div>
 
@@ -277,20 +306,19 @@ user = DataScientist()
                                             Omega Healthcare Management Services</p>
                                         <p
                                             style="color: var(--text-muted); font-family: var(--font-mono); font-size: 0.95rem; margin-bottom: 5px;">
-                                            April 2022 - Aug 2022</p>
+                                            April 2022 to August 2022</p>
                                         <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px;"><i
                                                 class="fas fa-map-marker-alt"></i> Tiruchirappalli, Tamil Nadu, India
                                             (On-site)</p>
                                         <ul style="color: var(--text-primary); margin-left: 20px; line-height: 1.6;">
-                                            <li style="margin-bottom: 8px;">Boosted efficiency through optimising
-                                                payment and billing processes using data analysis techniques.</li>
-                                            <li style="margin-bottom: 8px;">Ensured compliance and adherence to
-                                                financial regulations and company policies.</li>
-                                            <li>Analysed healthcare claims and payments for a group of US medical
-                                                providers with various insurance companies.</li>
+                                            <li style="margin-bottom: 8px;">Transaction level exception analysis on US
+                                                healthcare claims and payments across multiple insurance carriers.</li>
+                                            <li style="margin-bottom: 8px;">Applied payer specific rules to find and
+                                                resolve discrepancies inside a regulated compliance framework.</li>
+                                            <li>Improved payment and billing processes using data analysis.</li>
                                         </ul>
                                         <div class="tags" style="margin-top: 15px;">
-                                            <span>Project Management</span><span>Accounts</span><span>Data
+                                            <span>Exception Analysis</span><span>Compliance</span><span>Data
                                                 Analysis</span>
                                         </div>
                                     </div>
@@ -304,12 +332,11 @@ user = DataScientist()
                                             Tamil Nadu Newsprint And Papers Limited (TNPL)</p>
                                         <p
                                             style="color: var(--text-muted); font-family: var(--font-mono); font-size: 0.95rem; margin-bottom: 5px;">
-                                            Feb 2019</p>
+                                            February 2019</p>
                                         <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px;"><i
                                                 class="fas fa-map-marker-alt"></i> Tamil Nadu, India (On-site)</p>
                                         <ul style="color: var(--text-primary); margin-left: 20px; line-height: 1.6;">
-                                            <li>Completed a 1-month comprehensive internship program at the paper
-                                                manufacturing plant.</li>
+                                            <li>One month internship at the paper manufacturing plant.</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -329,63 +356,107 @@ user = DataScientist()
                             <div class="content-reveal">
                                 <h2 class="section-title">AI, ML & Data Science Projects</h2>
                                 <div class="projects-grid">
+                                    <div class="project-card">
+                                        <h3>RenewGrid</h3>
+                                        <p>Renewable energy monitoring, forecasting and fault detection platform.
+                                            Reads live inverter hardware over Modbus across a rooftop installation,
+                                            a 9 turbine wind farm and 31 offshore wind farms from open data. Close to
+                                            500 automated tests with adversarial input handling. Forecasts scored walk
+                                            forward against naive baselines, and modelled revenue reconciled against
+                                            real metered bills to within about 1 percent.</p>
+                                        <div class="tags"><span>Python</span><span>PostgreSQL</span><span>Streamlit</span><span>Modbus</span>
+                                        </div>
+                                        <span class="no-repo-hint"><i class="fas fa-lock"></i> Private build, code not
+                                            published. Happy to walk through it.</span>
+                                    </div>
                                     <div class="project-card" data-repo="santhosharun99/CricStat-Pro-Engine">
                                         <h3>CricStat Pro Engine</h3>
-                                        <p>High-performance analytics platform processing 7M+ data points. Custom neon
-                                            UI with deep statistical engine.</p>
+                                        <p>Cricket analytics platform processing over 7 million ball by ball data
+                                            points across IPL, T20I, ODI and Test formats. Ingestion, enrichment and a
+                                            statistical engine behind a custom dashboard.</p>
                                         <div class="tags">
-                                            <span>Python</span><span>PostgreSQL</span><span>SQLAlchemy</span>
+                                            <span>Python</span><span>DuckDB</span><span>Selenium</span><span>Streamlit</span>
                                         </div>
+                                        <span class="repo-hint"><i class="fab fa-github"></i> View code</span>
                                     </div>
                                     <div class="project-card" data-repo="santhosharun99/The_Oracle_F1_Strategy">
-                                        <h3>The Oracle | F1 AI</h3>
-                                        <p>Bayesian Race Strategy Optimization Engine. Ingests real-time telemetry to
-                                            predict pit strategies using Monte Carlo simulations.</p>
-                                        <div class="tags"><span>Streamlit</span><span>XGBoost</span><span>Monte
+                                        <h3>The Oracle, F1 Race Strategy</h3>
+                                        <p>Bayesian race strategy optimiser for Formula 1. Uses Monte Carlo simulation
+                                            over race telemetry to work out when to pit.</p>
+                                        <div class="tags"><span>Python</span><span>XGBoost</span><span>Monte
                                                 Carlo</span></div>
+                                        <span class="repo-hint"><i class="fab fa-github"></i> View code</span>
                                     </div>
                                     <div class="project-card" data-repo="santhosharun99/Ind_Vs_Nz_ODI_Analytics">
-                                        <h3>IND vs NZ Analytics</h3>
-                                        <p>Interactive dashboard featuring pitch maps and granular matchup analysis
-                                            (Hotspots) algorithms.</p>
-                                        <div class="tags"><span>Python</span><span>Plotly</span><span>Pandas</span>
+                                        <h3>IND vs NZ ODI Analytics</h3>
+                                        <p>Interactive dashboard for the 2023 ODI series. Worm graphs, phase breakdowns,
+                                            realistic pitch maps and batsman versus bowler hotspot analysis.</p>
+                                        <div class="tags"><span>Python</span><span>Streamlit</span><span>Plotly</span>
                                         </div>
+                                        <span class="repo-hint"><i class="fab fa-github"></i> View code</span>
                                     </div>
                                     <div class="project-card" data-repo="santhosharun99/Womens-Tennis-Stats-since-2007">
-                                        <h3>WTA Tennis ML</h3>
-                                        <p>Analytics platform for WTA rankings (2007-2023) with Selenium scraping and
-                                            predictive Head-to-Head modeling.</p>
+                                        <h3>WTA Tennis Analytics</h3>
+                                        <p>Analytics platform over WTA rankings from 2007 to 2023, built on a dataset
+                                            scraped from scratch with Selenium, plus surface specific head to head
+                                            modelling.</p>
                                         <div class="tags"><span>Selenium</span><span>Pandas</span><span>Streamlit</span>
                                         </div>
+                                        <span class="repo-hint"><i class="fab fa-github"></i> View code</span>
                                     </div>
                                     <div class="project-card"
                                         data-repo="santhosharun99/Explaining-molecular-smell-with-deep-learning">
                                         <h3>Explaining Molecular Smell</h3>
-                                        <p>Multi-modal DL project (GNNs + CNNs) predicting odor from molecular/spectral
-                                            data.</p>
-                                        <div class="tags"><span>TensorFlow</span><span>GNN</span><span>CNN</span></div>
+                                        <p>MSc dissertation, marked 80. Multi modal deep learning pipeline predicting
+                                            olfactory perception from molecular structure and spectral data, combining a
+                                            Graph Neural Network with a CNN.</p>
+                                        <div class="tags"><span>TensorFlow</span><span>JAX</span><span>GNN</span><span>CNN</span>
+                                        </div>
+                                        <span class="repo-hint"><i class="fab fa-github"></i> View code</span>
                                     </div>
                                     <div class="project-card" data-repo="santhosharun99/IPL-data-visualisation">
-                                        <h3>IPL EDA Visualisation</h3>
-                                        <p>Exploratory Data Analysis over 15 years of IPL data with stadium
-                                            normalization methods.</p>
+                                        <h3>IPL Exploratory Analysis</h3>
+                                        <p>Exploratory analysis over 15 years of IPL data at delivery level, with
+                                            stadium normalisation and player performance metrics.</p>
                                         <div class="tags"><span>Jupyter</span><span>Pandas</span><span>Matplotlib</span>
                                         </div>
+                                        <span class="repo-hint"><i class="fab fa-github"></i> View code</span>
+                                    </div>
+                                    <div class="project-card" data-repo="santhosharun99/stock-price-prediction">
+                                        <h3>Stock Price Prediction</h3>
+                                        <p>Time series forecasting on equity price data, comparing model families
+                                            against a naive baseline.</p>
+                                        <div class="tags"><span>Jupyter</span><span>Pandas</span><span>Forecasting</span>
+                                        </div>
+                                        <span class="repo-hint"><i class="fab fa-github"></i> View code</span>
+                                    </div>
+                                    <div class="project-card"
+                                        data-repo="santhosharun99/World-Heritage-Sites-and-Marine-Protected-Areas-Mapping">
+                                        <h3>Heritage Sites and Marine Areas Mapping</h3>
+                                        <p>Geospatial mapping of UNESCO World Heritage Sites against marine protected
+                                            areas.</p>
+                                        <div class="tags"><span>Python</span><span>Geospatial</span><span>Mapping</span>
+                                        </div>
+                                        <span class="repo-hint"><i class="fab fa-github"></i> View code</span>
                                     </div>
                                     <div class="project-card">
-                                        <h3>IOCL Enterprise Architecture</h3>
-                                        <p>Full-stack solution bridging data systems with robust architecture for Indian
-                                            Oil Corporation.</p>
+                                        <h3>IOCL TRY IDO Platform</h3>
+                                        <p>Full stack analytics and inventory platform for Indian Oil, serving over
+                                            1,000 users across 9 districts. Real time inventory, automated data
+                                            validation and demand forecasting.</p>
                                         <div class="tags"><span>React</span><span>Node.js</span><span>Supabase</span>
                                         </div>
+                                        <span class="no-repo-hint"><i class="fas fa-lock"></i> Client work, code not
+                                            public.</span>
                                     </div>
                                     <div class="project-card">
                                         <h3>Predictive Analysis Literature Review</h3>
-                                        <p>Models of predictive analysis and its applications in manufacturing, finance,
-                                            and the retail sector. Associated with University of Liverpool (Sep 2022 -
-                                            Dec 2022).</p>
+                                        <p>Review of predictive analysis methods and their use in manufacturing,
+                                            finance and retail. University of Liverpool, September to December 2022.</p>
                                         <div class="tags"><span>Predictive Analytics</span><span>Literature
-                                                Review</span><span>Finance</span></div>
+                                                Review</span></div>
+                                        <span class="no-repo-hint"><i class="fas fa-file-alt"></i> Written work,
+                                            available on request.</span>
                                     </div>
                                 </div>
                             </div>
@@ -403,35 +474,43 @@ user = DataScientist()
                             </div>
                             <div class="content-reveal">
                                 <h2 class="section-title">Sports Analytics Projects</h2>
+                                <p style="color: var(--text-muted); margin-bottom: 20px; max-width: 700px; line-height: 1.6;">
+                                    Several of these run on datasets I built from scratch where no structured feed
+                                    existed, scraped from raw text and checked against official records. PFSA Level 2
+                                    certified in football performance analysis.</p>
                                 <div class="projects-grid">
-                                    <div class="project-card" data-repo="santhosharun99/cricstat-pro-engine">
+                                    <div class="project-card" data-repo="santhosharun99/CricStat-Pro-Engine">
                                         <h3>CricStat Pro Engine</h3>
-                                        <p>Transforms raw ball-by-ball JSON (IPL, T20I, ODI, Test) into actionable match
-                                            insights.</p>
-                                        <div class="tags"><span>Analytics</span><span>PostgreSQL</span></div>
+                                        <p>Turns raw ball by ball JSON from IPL, T20I, ODI and Test cricket into match
+                                            insights. Over 7 million data points.</p>
+                                        <div class="tags"><span>Analytics</span><span>DuckDB</span></div>
+                                        <span class="repo-hint"><i class="fab fa-github"></i> View code</span>
                                     </div>
                                     <div class="project-card" data-repo="santhosharun99/The_Oracle_F1_Strategy">
-                                        <h3>The Oracle | F1 Strategy</h3>
-                                        <p>Features a "God-Tier" Physics Engine and Command Center IO for Formula 1
-                                            predictions.</p>
+                                        <h3>The Oracle, F1 Strategy</h3>
+                                        <p>Physics based race simulation with a command centre interface for Formula 1
+                                            pit strategy.</p>
                                         <div class="tags"><span>Simulation</span><span>Strategy</span></div>
+                                        <span class="repo-hint"><i class="fab fa-github"></i> View code</span>
                                     </div>
                                     <div class="project-card" data-repo="santhosharun99/Ind_Vs_Nz_ODI_Analytics">
-                                        <h3>IND vs NZ ODI (2023)</h3>
-                                        <p>Deep dive into the 2023 ODI series with Worm graphs and phase analysis.</p>
+                                        <h3>IND vs NZ ODI 2023</h3>
+                                        <p>Worm graphs, run rate analysis and phase breakdowns for the 2023 ODI
+                                            series.</p>
                                         <div class="tags"><span>Dashboard</span><span>Plotly</span></div>
+                                        <span class="repo-hint"><i class="fab fa-github"></i> View code</span>
                                     </div>
                                     <div class="project-card" data-repo="santhosharun99/Womens-Tennis-Stats-since-2007">
-                                        <h3>WTA Head-to-Head Engine</h3>
-                                        <p>Interactive surface-wise performance analysis for women's tennis matchups.
-                                        </p>
+                                        <h3>WTA Head to Head Engine</h3>
+                                        <p>Surface by surface performance analysis for women's tennis matchups.</p>
                                         <div class="tags"><span>Scraping</span><span>Stats</span></div>
+                                        <span class="repo-hint"><i class="fab fa-github"></i> View code</span>
                                     </div>
                                     <div class="project-card" data-repo="santhosharun99/IPL-data-visualisation">
-                                        <h3>IPL Visualisation (08-23)</h3>
-                                        <p>Delivery-level computational analysis and player performance metrics
-                                            formulation.</p>
+                                        <h3>IPL Visualisation, 2008 to 2023</h3>
+                                        <p>Delivery level analysis and player performance metrics across 15 seasons.</p>
                                         <div class="tags"><span>EDA</span><span>Matplotlib</span></div>
+                                        <span class="repo-hint"><i class="fab fa-github"></i> View code</span>
                                     </div>
                                 </div>
                             </div>
@@ -453,24 +532,31 @@ user = DataScientist()
                                     <div class="project-card"
                                         data-repo="santhosharun99/Explaining-molecular-smell-with-deep-learning">
                                         <h3>Explaining Molecular Smell</h3>
-                                        <p>MSc Dissertation mapping molecular structures and spectral data to olfactory
-                                            perception using advanced neural network topologies in collaboration with
-                                            the Cooper Group.</p>
+                                        <p>MSc dissertation at the Leverhulme Research Centre for Functional Materials
+                                            Design, mapping molecular structure and spectral data to olfactory
+                                            perception. Supervised by Xenofon Evangelopoulos, Theme Lead in
+                                            Computation. Marked 80.</p>
                                         <div class="tags"><span>JAX</span><span>Deep Learning</span><span>GNNs</span>
                                         </div>
+                                        <span class="repo-hint"><i class="fab fa-github"></i> View code</span>
                                     </div>
                                     <div class="project-card">
                                         <h3>Antibiotics in Poultry</h3>
-                                        <p>Evaluation of antibiotics in raw meat (Poultry). Associated with Bishop Heber
-                                            College, Tiruchirappalli (Oct 2019 – Dec 2019).</p>
-                                        <div class="tags"><span>Biosciences</span><span>Evaluation</span></div>
+                                        <p>Evaluation of antibiotic residues in raw poultry meat. Bishop Heber College,
+                                            Tiruchirappalli, October to December 2019.</p>
+                                        <div class="tags"><span>Biosciences</span><span>Analytical
+                                                Chemistry</span></div>
+                                        <span class="no-repo-hint"><i class="fas fa-flask"></i> Lab work, report
+                                            available on request.</span>
                                     </div>
                                     <div class="project-card">
                                         <h3>CF@CSN Nanocomposite</h3>
-                                        <p>A Smart Nanocomposite for Photocatalytic and Electrochemical Applications.
-                                            Associated with Bishop Heber College, Tiruchirappalli (Sep 2019 – Dec 2019).
-                                        </p>
+                                        <p>A nanocomposite for photocatalytic and electrochemical applications,
+                                            including synthesis and characterisation. Bishop Heber College,
+                                            Tiruchirappalli, September to December 2019.</p>
                                         <div class="tags"><span>Nanomaterials</span><span>Photocatalysis</span></div>
+                                        <span class="no-repo-hint"><i class="fas fa-flask"></i> Lab work, report
+                                            available on request.</span>
                                     </div>
                                 </div>
                             </div>
@@ -498,6 +584,11 @@ user = DataScientist()
                                             class="fas fa-address-card" style="color: #00f2ff; margin-right: 10px;"></i>
                                         Get In Touch</h3>
 
+                                    <p style="color: var(--text-muted); margin-bottom: 20px; line-height: 1.6;">
+                                        Available immediately and open to relocation anywhere in India, as well as
+                                        remote work. Looking at data scientist, data analyst, ML engineer and GenAI
+                                        roles.</p>
+
                                     <div style="display: flex; flex-direction: column; gap: 15px;">
                                         <div
                                             style="display: flex; align-items: center; color: var(--text-primary); font-size: 1.1rem;">
@@ -517,6 +608,14 @@ user = DataScientist()
 
                                         <div
                                             style="display: flex; align-items: center; color: var(--text-primary); font-size: 1.1rem;">
+                                            <i class="fab fa-github"
+                                                style="color: var(--text-primary); width: 30px; font-size: 1.2rem;"></i>
+                                            <a href="https://github.com/santhosharun99" target="_blank"
+                                                style="color: var(--text-primary); text-decoration: none;">github.com/santhosharun99</a>
+                                        </div>
+
+                                        <div
+                                            style="display: flex; align-items: center; color: var(--text-primary); font-size: 1.1rem;">
                                             <i class="fas fa-phone-alt"
                                                 style="color: #f39c12; width: 30px; font-size: 1.2rem;"></i>
                                             <a href="tel:+918667555900"
@@ -528,12 +627,12 @@ user = DataScientist()
                                             style="display: flex; align-items: flex-start; color: var(--text-primary); font-size: 1.1rem;">
                                             <i class="fas fa-map-marker-alt"
                                                 style="color: #e74c3c; width: 30px; font-size: 1.2rem; margin-top: 4px;"></i>
-                                            <span style="line-height: 1.5;">1-b, Aani street, Selvanagar
-                                                Extn,<br>Ponnagar, Tiruchirappalli,<br>Tamil Nadu, India 620001</span>
+                                            <span style="line-height: 1.5;">Tiruchirappalli,<br>Tamil Nadu, India
+                                                620001</span>
                                         </div>
                                     </div>
 
-                                    <div class="tags" style="margin-top: 30px; display: flex; gap: 15px;">
+                                    <div class="tags" style="margin-top: 30px; display: flex; gap: 15px; flex-wrap: wrap;">
                                         <a href="mailto:santhosharunagiri99@gmail.com" style="text-decoration: none;">
                                             <span
                                                 style="background: rgba(0, 242, 255, 0.1); border-color: #00f2ff; color: #00f2ff; cursor: pointer;">
@@ -545,6 +644,13 @@ user = DataScientist()
                                             <span
                                                 style="background: rgba(0, 119, 181, 0.1); border-color: #0077b5; color: #0077b5; cursor: pointer;">
                                                 <i class="fab fa-linkedin"></i> Connect on LinkedIn
+                                            </span>
+                                        </a>
+                                        <a href="https://github.com/santhosharun99" target="_blank"
+                                            style="text-decoration: none;">
+                                            <span
+                                                style="background: rgba(255, 255, 255, 0.06); cursor: pointer;">
+                                                <i class="fab fa-github"></i> See the code
                                             </span>
                                         </a>
                                     </div>
