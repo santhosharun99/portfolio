@@ -54,6 +54,8 @@
                 <div class="sidebar-files">
                     <div class="file active" data-target="#hero-section"><i class="fas fa-user-circle"
                             style="color: #4B8BBE;"></i> Profile</div>
+                    <div class="file" data-target="#terminal-section"><i class="fas fa-terminal"
+                            style="color: #28c840;"></i> terminal.sh</div>
                     <div class="file" data-target="#skills-section"><i class="fas fa-tools" style="color: #e74c3c;"></i>
                         Skills.json</div>
                     <div class="file" data-target="#education-section"><i class="fas fa-graduation-cap"
@@ -123,6 +125,39 @@ user = DataScientist()
                                     <span>TensorFlow</span>
                                     <span>PostgreSQL</span>
                                     <span>Power BI</span>
+                                    <span>Excel &amp; VBA</span>
+                                </div>
+
+                                <!-- Animated metrics -->
+                                <div class="metrics" id="metrics">
+                                    <div class="metric"><b data-to="1000" data-suffix="+">0</b><span>people using what I built</span></div>
+                                    <div class="metric"><b data-to="9">0</b><span>districts served</span></div>
+                                    <div class="metric"><b data-to="7" data-suffix="M+">0</b><span>data points processed</span></div>
+                                    <div class="metric"><b data-to="500" data-prefix="~">0</b><span>automated tests written</span></div>
+                                    <div class="metric"><b data-to="1" data-suffix="%" data-prefix="±">0</b><span>forecast vs metered reality</span></div>
+                                </div>
+
+                                <p class="kbd-hint">Press <kbd>⌘</kbd><kbd>K</kbd> or <kbd>Ctrl</kbd><kbd>K</kbd> to jump anywhere · or use the terminal below</p>
+                            </div>
+                        </div>
+
+                        <!-- SPACING -->
+                        <div class="spacer-section" style="height:6vh"></div>
+
+                        <!-- INTERACTIVE TERMINAL -->
+                        <div class="section" id="terminal-section">
+                            <div class="term-wrap">
+                                <div class="term-bar">
+                                    <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+                                    <span class="term-title">santhosh@portfolio — zsh</span>
+                                </div>
+                                <div class="term-body" id="term-body" tabindex="0">
+                                    <div class="term-line"><span class="term-out">Welcome. This terminal is real — type a command and press Enter.</span></div>
+                                    <div class="term-line"><span class="term-out">Try <b>help</b>, <b>skills</b>, <b>projects</b>, <b>whoami</b>, or <b>hire</b>.</span></div>
+                                    <div class="term-line term-input-line">
+                                        <span class="term-prompt">santhosh@portfolio:~$</span>
+                                        <input id="term-input" autocomplete="off" spellcheck="false" aria-label="terminal input">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -138,42 +173,32 @@ user = DataScientist()
                                     class="function">competencies.get_skills</span>())
                             </div>
                             <div class="content-reveal">
-                                <h2 class="section-title">Technical & Non-Technical Skills</h2>
-                                <div class="projects-grid">
-                                    <div class="project-card" style="border-left-color: #e74c3c; cursor: default;"
-                                        onclick="event.stopPropagation()">
-                                        <h3 style="color: var(--text-primary); font-size: 1.3rem;"><i
-                                                class="fas fa-laptop-code" style="color:#e74c3c"></i> Technical Skills
-                                        </h3>
-                                        <ul
-                                            style="color: var(--text-primary); margin-left: 20px; line-height: 1.8; margin-top: 15px;">
-                                            <li><b>Languages & Tools:</b> Python, SQL, PostgreSQL, JavaScript,
-                                                TypeScript, R, Git, Linux.</li>
-                                            <li><b>AI & ML:</b> scikit-learn, XGBoost, TensorFlow, Keras, JAX,
-                                                Graph Neural Networks, CNNs, LLM evaluation, prompt engineering,
-                                                Monte Carlo simulation.</li>
-                                            <li><b>Data & Analytics:</b> pandas, NumPy, SciPy, ETL pipelines,
-                                                Selenium, Power BI, Streamlit, Matplotlib, Plotly.</li>
-                                            <li><b>Statistics:</b> Hypothesis testing, experimental design,
-                                                Bayesian methods, walk forward and hold out validation.</li>
-                                        </ul>
-                                    </div>
+                                <h2 class="section-title">Skills</h2>
+                                <p style="color:var(--text-muted);margin-bottom:18px">Filter by category, or search. Everything here is something I have used on real work.</p>
 
-                                    <div class="project-card" style="border-left-color: #3498db; cursor: default;"
-                                        onclick="event.stopPropagation()">
-                                        <h3 style="color: var(--text-primary); font-size: 1.3rem;"><i
-                                                class="fas fa-users" style="color:#3498db"></i> Non-Technical Skills
-                                        </h3>
-                                        <ul
-                                            style="color: var(--text-primary); margin-left: 20px; line-height: 1.8; margin-top: 15px;">
-                                            <li><b>Ownership:</b> Ran a platform end to end, from gathering
-                                                requirements with managers through to maintenance.</li>
-                                            <li><b>Communication:</b> Explaining quantitative findings to people
-                                                with no technical background, and training staff to use systems.</li>
-                                            <li><b>Operational:</b> Process automation, working inside regulated
-                                                compliance frameworks, technical documentation.</li>
-                                        </ul>
+                                <div class="skill-controls">
+                                    <input type="search" id="skill-search" placeholder="Search skills…">
+                                    <div class="skill-filters" id="skill-filters">
+                                        <button class="sf on" data-cat="all">All</button>
+                                        <button class="sf" data-cat="lang">Languages</button>
+                                        <button class="sf" data-cat="ml">AI &amp; ML</button>
+                                        <button class="sf" data-cat="data">Data &amp; Analytics</button>
+                                        <button class="sf" data-cat="viz">Visualisation</button>
+                                        <button class="sf" data-cat="eng">Engineering</button>
+                                        <button class="sf" data-cat="geo">Geospatial</button>
+                                        <button class="sf" data-cat="stats">Statistics</button>
+                                        <button class="sf" data-cat="soft">Ways of working</button>
                                     </div>
+                                </div>
+
+                                <div class="skill-grid" id="skill-grid"></div>
+
+                                <p class="skill-count" id="skill-count"></p>
+
+                                <div class="learning-box">
+                                    <h4><i class="fas fa-seedling"></i> Currently closing</h4>
+                                    <p>Azure beyond Azure ML, Databricks and PySpark, Docker and Kubernetes, Airflow, Snowflake.
+                                    I would rather list these here than imply I have them.</p>
                                 </div>
                             </div>
                         </div>
@@ -694,7 +719,300 @@ user = DataScientist()
 
     </div>
 
+    <!-- ===== Interactive layer ===== -->
+    <style>
+      .metrics{display:flex;flex-wrap:wrap;gap:26px;margin:26px 0 8px}
+      .metric b{display:block;font-family:var(--font-mono);font-size:2rem;line-height:1;color:#00f2ff;font-weight:700}
+      .metric span{display:block;font-size:.78rem;color:var(--text-muted);margin-top:6px;max-width:130px;line-height:1.35}
+      .kbd-hint{margin-top:22px;font-size:.85rem;color:var(--text-muted)}
+      kbd{font-family:var(--font-mono);font-size:.75rem;background:rgba(127,127,127,.18);border:1px solid rgba(127,127,127,.35);
+          border-radius:4px;padding:1px 6px;margin:0 1px}
+
+      /* terminal */
+      .term-wrap{border:1px solid rgba(127,127,127,.28);border-radius:10px;overflow:hidden;max-width:760px;
+                 box-shadow:0 10px 40px rgba(0,0,0,.28)}
+      .term-bar{display:flex;align-items:center;gap:7px;padding:9px 13px;background:rgba(127,127,127,.14)}
+      .term-bar .dot{width:11px;height:11px;border-radius:50%;display:inline-block}
+      .dot.r{background:#ff5f57}.dot.y{background:#febc2e}.dot.g{background:#28c840}
+      .term-title{margin-left:10px;font-family:var(--font-mono);font-size:.75rem;color:var(--text-muted)}
+      .term-body{padding:16px;font-family:var(--font-mono);font-size:.86rem;line-height:1.75;
+                 min-height:260px;max-height:400px;overflow-y:auto;cursor:text;outline:none}
+      .term-line{white-space:pre-wrap;word-break:break-word}
+      .term-out{color:var(--text-primary);opacity:.92}
+      .term-out b{color:#00f2ff;font-weight:600}
+      .term-echo{color:var(--text-muted)}
+      .term-err{color:#ff7b72}
+      .term-prompt{color:#28c840;margin-right:8px;white-space:nowrap}
+      .term-input-line{display:flex;align-items:center}
+      #term-input{flex:1;background:transparent;border:none;outline:none;color:var(--text-primary);
+                  font-family:var(--font-mono);font-size:.86rem;caret-color:#00f2ff}
+
+      /* skills */
+      .skill-controls{display:flex;flex-direction:column;gap:12px;margin-bottom:18px}
+      #skill-search{background:transparent;border:1px solid rgba(127,127,127,.3);border-radius:8px;padding:9px 13px;
+                    color:var(--text-primary);font-family:inherit;font-size:.9rem;max-width:300px;outline:none}
+      #skill-search:focus{border-color:#00f2ff}
+      .skill-filters{display:flex;flex-wrap:wrap;gap:7px}
+      .sf{background:transparent;border:1px solid rgba(127,127,127,.3);color:var(--text-muted);border-radius:999px;
+          padding:5px 13px;font-size:.8rem;cursor:pointer;font-family:inherit;transition:.18s}
+      .sf:hover{color:var(--text-primary);border-color:rgba(127,127,127,.6)}
+      .sf.on{background:#00f2ff;border-color:#00f2ff;color:#04121a;font-weight:600}
+      .skill-grid{display:flex;flex-wrap:wrap;gap:8px}
+      .skill{border:1px solid rgba(127,127,127,.28);border-radius:8px;padding:7px 13px;font-size:.85rem;
+             color:var(--text-primary);background:rgba(127,127,127,.06);transition:.18s;cursor:default}
+      .skill:hover{border-color:#00f2ff;transform:translateY(-2px)}
+      .skill em{font-style:normal;color:#00f2ff;font-size:.72rem;margin-left:7px;opacity:.85}
+      .skill-count{color:var(--text-muted);font-size:.8rem;margin-top:14px}
+      .learning-box{margin-top:26px;border-left:3px solid #f39c12;background:rgba(243,156,18,.07);
+                    border-radius:0 8px 8px 0;padding:14px 18px;max-width:700px}
+      .learning-box h4{color:#f39c12;font-size:.95rem;margin-bottom:6px}
+      .learning-box p{color:var(--text-muted);font-size:.87rem;line-height:1.6}
+
+      /* command palette */
+      .cmdk{position:fixed;inset:0;background:rgba(0,0,0,.55);backdrop-filter:blur(3px);z-index:9999;
+            display:none;align-items:flex-start;justify-content:center;padding-top:14vh}
+      .cmdk.open{display:flex}
+      .cmdk-box{width:min(560px,92vw);background:var(--bg-secondary,#161b22);border:1px solid rgba(127,127,127,.35);
+                border-radius:12px;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.5)}
+      .cmdk-box input{width:100%;background:transparent;border:none;outline:none;padding:16px 18px;
+                      color:var(--text-primary);font-size:1rem;font-family:inherit;
+                      border-bottom:1px solid rgba(127,127,127,.25)}
+      .cmdk-list{max-height:320px;overflow-y:auto}
+      .cmdk-item{display:flex;align-items:center;gap:11px;padding:11px 18px;cursor:pointer;font-size:.9rem;
+                 color:var(--text-primary)}
+      .cmdk-item .sub{margin-left:auto;font-size:.75rem;color:var(--text-muted)}
+      .cmdk-item.sel,.cmdk-item:hover{background:rgba(0,242,255,.12)}
+      .cmdk-item i{color:#00f2ff;width:17px;text-align:center}
+
+      /* github live stats */
+      .gh-stats{display:flex;flex-wrap:wrap;gap:22px;margin-top:16px;font-family:var(--font-mono);font-size:.82rem;
+                color:var(--text-muted)}
+      .gh-stats b{color:#00f2ff}
+      @media(max-width:700px){.metric b{font-size:1.5rem}.metrics{gap:18px}}
+    </style>
+
+    <div class="cmdk" id="cmdk">
+      <div class="cmdk-box">
+        <input id="cmdk-input" placeholder="Jump to a section, project or contact…" autocomplete="off">
+        <div class="cmdk-list" id="cmdk-list"></div>
+      </div>
+    </div>
+
     <script src="script.js"></script>
+    <script>
+    (function(){
+      /* ---------- animated metrics ---------- */
+      function runCounters(){
+        document.querySelectorAll('#metrics b').forEach(el=>{
+          const to=+el.dataset.to, pre=el.dataset.prefix||'', suf=el.dataset.suffix||'';
+          const dur=1400, t0=performance.now();
+          (function step(now){
+            const p=Math.min(1,(now-t0)/dur), e=1-Math.pow(1-p,3);
+            el.textContent=pre+Math.round(to*e).toLocaleString()+suf;
+            if(p<1) requestAnimationFrame(step);
+          })(t0);
+        });
+      }
+      const mo=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting){runCounters();mo.disconnect();}})},{threshold:.3});
+      const mEl=document.getElementById('metrics'); if(mEl) mo.observe(mEl);
+
+      /* ---------- skills ---------- */
+      const SKILLS=[
+        ['Python','lang','daily'],['SQL','lang','daily'],['JavaScript','lang'],['TypeScript','lang'],['R','lang'],['HTML & CSS','lang'],
+        ['scikit-learn','ml'],['XGBoost','ml'],['TensorFlow','ml'],['Keras','ml'],['JAX','ml'],['Haiku','ml'],['PyTorch','ml'],
+        ['Graph Neural Networks','ml','dissertation'],['CNNs','ml','dissertation'],['Computer Vision','ml'],
+        ['LLM Evaluation','ml','current'],['RAG','ml'],['Prompt Engineering','ml'],['Deep Learning','ml'],
+        ['pandas','data'],['NumPy','data'],['SciPy','data'],['PostgreSQL','data'],['DuckDB','data'],['SQLAlchemy','data'],
+        ['Supabase','data'],['ETL Pipelines','data'],['Selenium','data'],['Data Quality & Validation','data'],
+        ['Data Reconciliation','data'],['Microsoft Excel','data','10 yrs'],['VBA & Macros','data','10 yrs'],
+        ['Power BI','viz'],['Streamlit','viz'],['Plotly','viz'],['Matplotlib','viz'],['Seaborn','viz'],['Tableau','viz','academic'],
+        ['React','eng'],['React Native','eng'],['Node.js','eng'],['Git & GitHub','eng'],['Linux','eng'],['REST APIs','eng'],
+        ['Modbus','eng','hardware'],['Automated Testing','eng','~500 tests'],['Azure ML','eng','self taught'],
+        ['Claude Code','eng','daily'],['Codex','eng','daily'],['GitHub Copilot','eng','daily'],['Antigravity','eng','daily'],
+        ['QGIS','geo'],['ArcGIS','geo'],['Spatial Analysis','geo'],
+        ['Hypothesis Testing','stats'],['Experimental Design','stats'],['Bayesian Methods','stats'],
+        ['Monte Carlo Simulation','stats'],['Forecasting','stats'],['Walk-forward Validation','stats'],['Regression','stats'],
+        ['Stakeholder Management','soft'],['Requirements Gathering','soft'],['Technical Documentation','soft'],
+        ['Training Non-technical Users','soft'],['Working Independently','soft'],
+        ['English','soft','professional'],['Tamil','soft','native'],['Hindi','soft','read fluently']
+      ];
+      const grid=document.getElementById('skill-grid'), cnt=document.getElementById('skill-count'),
+            search=document.getElementById('skill-search');
+      let cat='all', q='';
+      function drawSkills(){
+        const list=SKILLS.filter(s=>(cat==='all'||s[1]===cat)&&s[0].toLowerCase().includes(q));
+        grid.innerHTML=list.map(s=>`<div class="skill">${s[0]}${s[2]?`<em>${s[2]}</em>`:''}</div>`).join('');
+        cnt.textContent=`${list.length} of ${SKILLS.length} shown`;
+      }
+      document.querySelectorAll('.sf').forEach(b=>b.onclick=()=>{
+        document.querySelectorAll('.sf').forEach(x=>x.classList.remove('on'));
+        b.classList.add('on'); cat=b.dataset.cat; drawSkills();
+      });
+      if(search) search.oninput=e=>{q=e.target.value.toLowerCase();drawSkills();};
+      drawSkills();
+
+      /* ---------- terminal ---------- */
+      const body=document.getElementById('term-body'), input=document.getElementById('term-input');
+      const CMDS={
+        help:()=>`Available commands:
+  <b>whoami</b>      who I am, briefly
+  <b>skills</b>      what I can actually do
+  <b>projects</b>    things I have built
+  <b>experience</b>  where I have worked
+  <b>education</b>   degrees and marks
+  <b>contact</b>     how to reach me
+  <b>github</b>      open my repositories
+  <b>cv</b>          what I am looking for
+  <b>hire</b>        the short pitch
+  <b>clear</b>       clear this terminal`,
+        whoami:()=>`Santhosh Arunagiri — data scientist, Tiruchirappalli, Tamil Nadu.
+MSc Data Science &amp; AI, Distinction, University of Liverpool.
+Built a live analytics platform for Indian Oil used by 1,000+ people across 9 districts.
+Available immediately. Open to relocation anywhere in India.`,
+        skills:()=>`Strongest: <b>Python</b>, <b>SQL</b>, <b>Excel &amp; VBA</b> (10 years), <b>Power BI</b>, <b>Streamlit</b>.
+ML: TensorFlow, Keras, JAX, PyTorch, scikit-learn, XGBoost, GNNs, CNNs, computer vision.
+Also: PostgreSQL, DuckDB, ETL, QGIS, ArcGIS, React, Node.js, Git, Linux.
+Agentic coding: Claude Code, Codex, Copilot, Antigravity — daily.
+Scroll to the Skills section to filter all ${SKILLS.length}.`,
+        projects:()=>`<b>RenewGrid</b> — monitoring &amp; fault detection over live inverter hardware (Modbus).
+   ~500 automated tests. Revenue reconciled against metered bills to ±1%.
+<b>Explaining Molecular Smell</b> — MSc dissertation, marked 80. GNN + CNN, multi modal.
+<b>CricStat Pro</b> — 7M+ ball-by-ball data points.
+<b>The Oracle</b> — Bayesian F1 strategy optimiser, Monte Carlo.
+<b>WTA Tennis</b> — dataset scraped from scratch, surface-specific modelling.
+Type <b>github</b> to see the code.`,
+        experience:()=>`<b>Indian Oil Corporation</b> (contract) · Jan–May 2026
+   Sole developer of the TRY IDO platform. 1,000+ users, 9 districts.
+   Honoured by the Executive Director (TNSO) and CGM (LPG).
+<b>Outlier.ai</b> (freelance) · 2025–present
+   LLM output evaluation against written specifications and rubrics.
+<b>Omega Healthcare</b> · Apr–Aug 2022
+   Transaction level exception analysis on US healthcare claims.`,
+        education:()=>`<b>MSc Data Science &amp; Artificial Intelligence</b> — Pass With Distinction
+University of Liverpool (Russell Group), 2022–2023
+   Applied Artificial Intelligence ......... <b>90</b>
+   MSc Project (dissertation) ............. <b>80</b>
+   Data Mining &amp; Visualisation ............ <b>79</b>
+   Machine Learning &amp; Bio-Inspired Opt. ... <b>78</b>
+<b>BSc Chemistry</b> — CGPA 8.04/10, Bishop Heber College, 2017–2020`,
+        contact:()=>`Email    <b>santhosharunagiri99@gmail.com</b>
+Phone    <b>+91 8667555900</b>
+LinkedIn linkedin.com/in/santhosh-arunagiri
+GitHub   github.com/santhosharun99
+Based in Tiruchirappalli, Tamil Nadu. Open to relocation.`,
+        github:()=>{window.open('https://github.com/santhosharun99','_blank');return'Opening github.com/santhosharun99 …';},
+        cv:()=>`Looking for: Data Scientist · Data Analyst · ML Engineer · Analytics roles.
+Location: anywhere in India, or remote. Notice period: <b>immediate</b>.
+Email me and I will send a CV written for your specific role, not a generic one.`,
+        hire:()=>`Here is the short version.
+I build things end to end and then check whether they are actually right.
+On RenewGrid that meant reconciling modelled revenue against real metered bills to within ~1%.
+At Indian Oil it meant validation rules that rejected bad records before they reached a report.
+I would rather find my own mistake than have you find it.
+<b>santhosharunagiri99@gmail.com</b>`,
+        ls:()=>`about/  skills/  experience/  projects/  education/  contact/`,
+        date:()=>new Date().toString(),
+        sudo:()=>`Nice try. But I do admire the confidence.`,
+        clear:()=>'__CLEAR__'
+      };
+      const ALIAS={exp:'experience',edu:'education',resume:'cv',who:'whoami',proj:'projects','ls -la':'ls'};
+      function println(html,cls){
+        const d=document.createElement('div'); d.className='term-line';
+        d.innerHTML=`<span class="${cls||'term-out'}">${html}</span>`;
+        body.insertBefore(d, body.querySelector('.term-input-line'));
+        body.scrollTop=body.scrollHeight;
+      }
+      function run(raw){
+        const cmd=raw.trim().toLowerCase();
+        println(`<span class="term-prompt">santhosh@portfolio:~$</span><span class="term-echo">${raw}</span>`);
+        if(!cmd) return;
+        const key=ALIAS[cmd]||cmd;
+        if(CMDS[key]){
+          const out=CMDS[key]();
+          if(out==='__CLEAR__'){
+            body.querySelectorAll('.term-line:not(.term-input-line)').forEach(n=>n.remove());
+          } else println(out);
+        } else {
+          println(`command not found: ${raw}. Type <b>help</b> for a list.`,'term-err');
+        }
+      }
+      if(input){
+        const hist=[]; let hi=-1;
+        input.addEventListener('keydown',e=>{
+          if(e.key==='Enter'){ if(input.value.trim())hist.unshift(input.value); hi=-1; run(input.value); input.value=''; }
+          else if(e.key==='ArrowUp'){ e.preventDefault(); if(hi<hist.length-1){hi++;input.value=hist[hi];} }
+          else if(e.key==='ArrowDown'){ e.preventDefault(); if(hi>0){hi--;input.value=hist[hi];} else {hi=-1;input.value='';} }
+        });
+        body.addEventListener('click',()=>input.focus());
+      }
+
+      /* ---------- command palette ---------- */
+      const NAV=[
+        ['Profile','#hero-section','fa-user-circle'],['Terminal','#terminal-section','fa-terminal'],
+        ['Skills','#skills-section','fa-tools'],['Education','#education-section','fa-graduation-cap'],
+        ['Experience','#experience-section','fa-briefcase'],['AI & ML Projects','#aiml-section','fa-brain'],
+        ['Sports Projects','#sports-section','fa-running'],['Chemistry Projects','#chemistry-section','fa-flask'],
+        ['Contact','#contact-section','fa-envelope']
+      ];
+      const LINKS=[
+        ['Email Santhosh','mailto:santhosharunagiri99@gmail.com','fa-paper-plane','opens mail'],
+        ['GitHub profile','https://github.com/santhosharun99','fa-code-branch','external'],
+        ['LinkedIn profile','https://linkedin.com/in/santhosh-arunagiri','fa-link','external']
+      ];
+      const pal=document.getElementById('cmdk'), pin=document.getElementById('cmdk-input'), plist=document.getElementById('cmdk-list');
+      let items=[], sel=0;
+      function buildPal(f){
+        f=(f||'').toLowerCase();
+        items=[...NAV.map(n=>({t:n[0],go:n[1],i:n[2],s:'section'})),
+               ...LINKS.map(l=>({t:l[0],go:l[1],i:l[2],s:l[3],ext:true}))]
+              .filter(x=>x.t.toLowerCase().includes(f));
+        sel=0;
+        plist.innerHTML=items.map((x,n)=>
+          `<div class="cmdk-item ${n===0?'sel':''}" data-n="${n}"><i class="fas ${x.i}"></i>${x.t}<span class="sub">${x.s}</span></div>`
+        ).join('')||'<div class="cmdk-item">No matches</div>';
+        plist.querySelectorAll('.cmdk-item[data-n]').forEach(el=>el.onclick=()=>go(+el.dataset.n));
+      }
+      function go(n){
+        const x=items[n]; if(!x) return;
+        closePal();
+        if(x.ext) window.open(x.go, x.go.startsWith('mailto')?'_self':'_blank');
+        else document.querySelector(x.go)?.scrollIntoView({behavior:'smooth',block:'start'});
+      }
+      function openPal(){pal.classList.add('open');pin.value='';buildPal('');setTimeout(()=>pin.focus(),40);}
+      function closePal(){pal.classList.remove('open');}
+      document.addEventListener('keydown',e=>{
+        if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();pal.classList.contains('open')?closePal():openPal();}
+        if(e.key==='Escape') closePal();
+        if(pal.classList.contains('open')){
+          if(e.key==='ArrowDown'||e.key==='ArrowUp'){
+            e.preventDefault();
+            sel=(sel+(e.key==='ArrowDown'?1:-1)+items.length)%items.length;
+            plist.querySelectorAll('.cmdk-item').forEach((el,n)=>el.classList.toggle('sel',n===sel));
+          }
+          if(e.key==='Enter') go(sel);
+        }
+      });
+      if(pin) pin.oninput=e=>buildPal(e.target.value);
+      if(pal) pal.onclick=e=>{if(e.target===pal)closePal();};
+
+      /* ---------- live GitHub stats ---------- */
+      fetch('https://api.github.com/users/santhosharun99').then(r=>r.json()).then(u=>{
+        if(!u||!u.public_repos) return;
+        const host=document.querySelector('#contact-section .content-reveal');
+        if(!host) return;
+        const d=document.createElement('div');
+        d.className='gh-stats';
+        d.innerHTML=`<span><b>${u.public_repos}</b> public repositories</span>
+                     <span>on GitHub since <b>${new Date(u.created_at).getFullYear()}</b></span>
+                     <span>live from the GitHub API</span>`;
+        host.appendChild(d);
+      }).catch(()=>{});
+    })();
+    </script>
+
+    <!-- GoatCounter: privacy friendly visit counting, no cookies, no personal data -->
+    <script data-goatcounter="https://santhosharun99.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
 </body>
 
 </html>
